@@ -21,11 +21,17 @@ ChuckT instances require a socket connection:
 
 ```javascript
 var sockjs = require('sockjs');
-var chuckt = require('chuckt');
+var chuckt = require('chuck_redis');
+
+// To set a global reference to all clients
+var connections={};
+
+// A global reference to the redis publisher
+var publisher = redis.createClient();
 
 var sock = sockjs.createServer();
 sock.on('connection', function(conn) {
-  var chuckt = new ChuckT(conn);
+  var socket = new ChuckT(conn,connections,publisher);
   // ... do chuckt stuff like add listeners or emit events
 ```
 
