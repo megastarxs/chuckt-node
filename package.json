@@ -1,15 +1,20 @@
 {
-  "name"        : "chuckt_redis",
-  "author"      : "Court Ewing",
-  "version"     : "0.1.4",
-  "description" : "ChuckT is an event transport system built on the SockJS websocket API. This module is the server-side implementation of ChuckT and is designed to complement the client-side ChuckT JavaScript library.This fork future implements publish/subscribe derived by redis.",
-  "keywords"    : ["websockets", "websocket", "sockjs", "sockjs-node", "events", "event","pubsub"],
-  "homepage"    : "https://github.com/epixa/chuckt-node",
-   "contributors": [
-    {
-      "name": "Sethuraman S",
-      "email": "megastarxs@gmail.com"
-    }
+  "name": "chuckt_redis",
+  "author": "Court Ewing",
+  "version": "0.1.4",
+  "description": "ChuckT is an event transport system built on the SockJS websocket API. This module is the server-side implementation of ChuckT and is designed to complement the client-side ChuckT JavaScript library.This fork future implements publish/subscribe derived by redis.",
+  "keywords": [
+    "websockets",
+    "websocket",
+    "sockjs",
+    "sockjs-node",
+    "events",
+    "event",
+    "pubsub"
+  ],
+  "homepage": "https://github.com/epixa/chuckt-node",
+  "contributors": [
+    "Sethuraman S <megastarxs@gmail.com>"
   ],
   "repository": {
     "type": "git",
@@ -23,5 +28,14 @@
   "scripts": {
     "test": "jasmine-node spec"
   },
-  "main": "lib/chuckt_redis.js"
+  "main": "lib/chuckt_redis.js",
+  "bugs": {
+    "url": "https://github.com/megastarxs/chuckt-node/issues"
+  },
+  "dependencies": {
+    "hiredis": "~0.1.15",
+    "jasmine-node": "~1.3.1",
+    "redis": "~0.9.1"
+  },
+  "license": "BSD-2-Clause"
 }
